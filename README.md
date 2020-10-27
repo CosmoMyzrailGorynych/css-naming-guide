@@ -44,9 +44,6 @@ The guide is built on the idea of *semantic classes*, *containers*, *modifiers*,
     * `.aModal.fullscreen .aModal-aFooter`.
     * `.texture-generator-aPreviewImage button`.
     * but not `.aModal .aModal-aFooter` (redundant) and not `.aModal .aDownload-anIcon` (not modular).
-1. *Semantic classes* and *containers* may change their appearance if certain *modifiers* are applied.
-    * Example: `.anInfoBox` has blue borders and pale blue background, with dark text color. `.red` and `.error` make any text red. There may exist a rule with `.anInfoBox.red, .anInfoBox.error` selector that also changes background and border color to shades of red.
-    * Another example: a *container* `.Downloads` exists. There may be a rule with a selector `.Downloads.compact` that provides a denser layout.
 1. *Modifiers* must not match HTML tag names.
 1. *Mimics* must match HTML tag names.
 
@@ -56,3 +53,7 @@ The guide is built on the idea of *semantic classes*, *containers*, *modifiers*,
 1. Avoid the usage of IDs in CSS. IDs are intended to be unique and restrict the reusability of styles.
     * If you do use them, IDs must start with `the` and follow the `camelCase`, e.g. `theHomeButton`, `theTopLeftLogo`.
 1. Firstly define the effect of usage of *modifiers* on all elements (e.g. `.small`), then define their effect on semantic classes, containers, and others (e.g. `.aModal.small`, `.Downloads.small`).
+1. *Semantic classes* and *containers* may change their appearance if certain *modifiers* are applied.
+    * Example: `.anInfoBox` has blue borders and pale blue background, with dark text color. `.red` and `.error` make any text red. There may exist a rule with `.anInfoBox.red, .anInfoBox.error` selector that also changes background and border color to shades of red.
+    * Another example: a *container* `.Downloads` exists. There may be a rule with a selector `.Downloads.compact` that provides a denser layout.
+1. If you find yourself using modifiers for the majority of elements, it means that you defined base styles of HTML elements and semantic classes in a wrong way. Revisit them to make them universal, reusable, but with a clear and sturdy image.
